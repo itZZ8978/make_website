@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/su1.css">
+</head>
+<body>
+
+    <div class="content">
+        <!-- 지역 센터 검색 영역 -->
+        <div class="section-header">
+            <div class="section-title">지역센터</div>
+            <!-- 검색 박스 (SVG 아이콘 포함) -->
+            <div class="search-box">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="#000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 
+                        16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 
+                        16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 
+                        5L20.49 19l-5-5zm-6 0C7.01 14 5 11.99 
+                        5 9.5S7.01 5 9.5 5 14 7.01 14 
+                        9.5 11.99 14 9.5 14z" />
+                </svg>
+                <input type="text" placeholder="검색" />
+            </div>
+        </div>
+
+        <!-- 센터 정보 박스들 -->
+        <div class="center-container">
+            <!-- 첫 번째 센터 정보 -->
+            <div class="center-box">
+                <!-- 이미지: 평택센터 사진 -->
+                <img src="../images/상담센터이미지1.jpeg" alt="센터">
+                <div class="center-title-row">
+                    <h2>평택정보지원센터</h2>
+                    <p>경기도 평택시 평택1로9번길 23 KR</p>
+                </div>
+                <div class="program-item"></div>
+                <p>전화번호: 031-691-9917</p>
+                <p>영업시간: 월요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">화요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">수요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">목요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">금요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">토요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">일요일 휴무</p>
+            </div>
+
+            <!-- 두 번째 센터 정보 -->
+            <div class="center-box">
+                <!-- 이미지: 서울센터 사진 -->
+                <img src="../images/상담센터이미지2.jpeg" alt="센터">
+                <div class="center-title-row2">
+                    <h2>서울청년지원센터</h2>
+                    <p>경기도 평택시 평택1로9번길 23 KR</p>
+                </div>
+                <div class="program-item"></div>
+                <p>전화번호: 031-691-9917</p>
+                <p>영업시간: 월요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">화요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">수요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">목요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">금요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">토요일 10:00 a.m. ~ 9:00 p.m.</p>
+                <p style="margin-left: 65px;">일요일 휴무</p>
+            </div>
+        </div>
+
+        <!-- 지원 프로그램 및 최근 본 항목 컨테이너 -->
+        <div class="container2">
+            <!-- 지원 프로그램 목록 -->
+            <div class="programs">
+                <div class="row">
+                    <h2 class="section-header">지원 프로그램</h2>
+                    <div class="tab">
+                        <button class="active">전체</button>
+                    </div>
+                </div>
+
+                <!-- 프로그램 목록: 각 항목들 -->
+                <div class="program-item">
+                    <div>
+                        <span class="program-label label-study">학업 지원</span>
+                        <span class="program-title">검정고시 대비반 운영</span>
+                    </div>
+                    <span>2025.06.12</span>
+                </div>
+
+                <div class="program-item">
+                    <div>
+                        <span class="program-label label-career">진로·직업</span>
+                        <span class="program-title">자격증 취득 지원</span>
+                    </div>
+                    <span>2025.06.09</span>
+                </div>
+
+                <div class="program-item">
+                    <div>
+                        <span class="program-label label-life">생활 지원</span>
+                        <span class="program-title">급식비 및 교통비 지원</span>
+                    </div>
+                    <span>2025.04.19</span>
+                </div>
+
+                <div class="program-item">
+                    <div>
+                        <span class="program-label label-life">생활 지원</span>
+                        <span class="program-title">건강검진 및 의료비 지원</span>
+                    </div>
+                    <span>2025.04.19</span>
+                </div>
+            </div>
+
+            <!-- 최근 본 항목 사이드바 -->
+            <div class="recent">
+                <!-- 두 번째 검색 박스 -->
+                <div class="search-box" style="margin-bottom: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="#000">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 
+                            16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 
+                            16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 
+                            5L20.49 19l-5-5zm-6 0C7.01 14 5 11.99 
+                            5 9.5S7.01 5 9.5 5 14 7.01 14 
+                            9.5 11.99 14 9.5 14z" />
+                    </svg>
+                    <input type="text" placeholder="검색">
+                </div>
+                <h2 class="section-header">최근 본 항목</h2>
+                <div class="recent-item">
+                    <div>
+                        <span class="program-label label-life">생활 지원</span>
+                        <span class="recent-title">건강검진 및 의료비 지원</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5월 일정 표 -->
+        <h3>5월 프로그램 및 지원 일정</h3>
+    <div class="ske">
+        <!-- 표: 달력 형태의 일정표 -->
+        <table>
+            <thead>
+                <!-- 표 제목: 월 이동 버튼 포함 -->
+                <caption class="font"><input type="button" value="<"> 2025.05  <input type="button" value=">"></caption>
+            </thead>
+            <tbody>
+                <!-- 표 헤더: 요일들 -->
+                <tr>
+                    <th style="color: red;">일요일</th> 
+                    <th>월요일</th> 
+                    <th>화요일</th> 
+                    <th>수요일</th> 
+                    <th>목요일</th> 
+                    <th>금요일</th> 
+                    <th style="color: blue;">토요일</th> 
+                </tr>
+                <!-- 첫 번째 주 -->
+                <tr>
+                    <td><p style="color: red;"></p></td>
+                    <td></td>
+                    <td><p>01</p>
+                        <!-- 목록: 일정 내용 -->
+                        <ul> 
+                            <li>근로자의 날<br>일부 기관 휴무 안내</li>
+                        </ul>
+                    </td>
+                    <td><p>02</p></td>
+                    <td><p>03</p>
+                        <ul>
+                            <li>꿈:터 심리상담<br>
+                             사전 신청 마감일</li>
+                        </ul>
+                    </td>
+                    <td><p>04</p></td>
+                    <td><p style="color: blue;">05</p>
+                        <ul>
+                            <li>어린이날<br>
+                                가족행사 참여 안내 게시</li>
+                        </ul>
+                    </td>
+                </tr>
+                <!-- 두 번째 주 -->
+                <tr>
+                    <td><p style="color: red;">06</p></td>
+                    <td><p>07</p></td>
+                    <td><p>08</p></td>
+                    <td><p>09</p></td>
+                    <td><p>10</p>
+                        <ul>
+                            <li>진로탐색 워크숍<br>
+                            1차 모집 마감</li>
+                        </ul>
+                    </td>
+                    <td><p>11</p></td>
+                    <td><p style="color: blue;">12</p></td>
+                </tr>
+                <!-- 세 번째 주 -->
+                <tr>
+                    <td><p style="color: red;">13</p>
+                        <ul>
+                            <li>건강검진 신청 시작일<br>
+                            (13세~18세 대상)</li>
+                        </ul>
+                    </td>
+                    <td><p>14</p></td>
+                    <td><p>15</p></td>
+                    <td><p>16</p></td>
+                    <td><p>17</p></td>
+                    <td><p>18</p></td>
+                    <td><p style="color: blue;">19</p></td>
+                </tr>
+                <!-- 네 번째 주 -->
+                <tr>
+                    <td><p style="color: red;">20</p>
+                        <ul>
+                            <li>생활비 지원금 <br>
+                            서류 마감일</li>
+                        </ul>
+                    </td>
+                    <td><p>21
+                        <ul>
+                            <li>학교 밖 청소년의 날<br>
+                            기념 행사 안내</li>
+                        </ul>
+                    </p></td>
+                    <td><p>22</p></td>
+                    <td><p>23</p></td>
+                    <td><p>24</p></td>
+                    <td><p>25</p>
+                        <ul>
+                            <li>꿈:터 진로상담 데이<br>
+                            (온라인/오프라인 병행)</li>
+                        </ul>
+                    </td>
+                    <td><p style="color: blue;">26</p></td>
+                </tr>
+                <!-- 다섯 번째 주 -->
+                <tr>
+                    <td><p style="color: red;">27</p></td>
+                    <td><p>28</p></td>
+                    <td><p>29</p></td>
+                    <td><p>30</p>
+                        <ul>
+                            <li>후기 학습지원 프로그램<br>
+                            접수 마감</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>   
+    </div>
+
+        <!-- 지원금 신청 폼 -->
+        <div class="application">
+            <h3 class="section-title2">지원금 신청</h3>
+            <!-- 폼: 지원금 신청서 -->
+            <form>
+                <fieldset>
+                    <!-- 신청자 기본 정보 입력 -->
+                    <h3>신청자 정보</h3>
+                    <label>이름: <input type="text" maxlength="10" minlength="6" size="10"></label><br><br>
+                    <label>생년월일: <input type="text" placeholder="0000년 00월 00일" maxlength="15" minlength="13" size="15"></label><br><br>
+                    <label>연락처(휴대폰): <input type="tel" placeholder="-를 포함해서 입력해 주세요." maxlength="13" minlength="12" size="21"></label><br><br>
+                    <label>현재 거주지: <input type="text" placeholder="시/도, 구/군" maxlength="50" minlength="10" size="45"></label><br><br>
+
+                    <!-- 지원 항목 체크박스 목록 -->
+                    <h3>지원 항목 선택(원하는 지원 항목 체크)</h3>
+                    <label><input type="checkbox" name="request" value="p3">학습비</label><br>
+                    <label><input type="checkbox" name="request" value="p5">교통비</label><br>
+                    <label><input type="checkbox" name="request" value="h3">급식비</label><br>
+                    <label><input type="checkbox" name="request" value="h5">학습비</label><br>
+                    <label>기타: <input type="text" maxlength="20" minlength="2" size="20"></label><br>
+
+                    <!-- 신청 사유 입력 -->
+                    <h3>신청 사유(간단히 작성)</h3>
+                    <label><input type="text" placeholder="예시) 현재 검정고시를 준비 중에 있으며, 교통비가 부담되어 지원을 신청합니다." maxlength="65" minlength="2" size="65"></label><br>
+
+                    <!-- 학업 상태 라디오 버튼 목록 -->
+                    <h3>학업/생활 상태 선택</h3>
+                    <label><input type="radio" name="situation" value="yes">학교 재학 중</label><br>
+                    <label><input type="radio" name="situation" value="yes">학교 임시 중단</label><br>
+                    <label><input type="radio" name="situation" value="yes">자퇴</label><br>
+                    <label><input type="radio" name="situation" value="yes">검정고시 준비 중</label><br>
+                    <label>기타: <input type="text" maxlength="20" minlength="2" size="20"></label><br>
+
+                    <!-- 동의 여부 라디오 버튼 -->
+                    <h3>개인정보 수집 동의</h3>
+                    <label><input type="radio" name="personal_information" value="h3">동의</label><br>
+                    <label><input type="radio" name="personal_information" value="h5">미동의</label><br>
+
+                    <!-- 문의사항 및 파일 업로드 -->
+                    <h3>문의사항</h3>
+                    <input type="file"><br>
+                    <textarea cols="55" rows="5"></textarea><br><br>
+                    <button type="submit" class="beoteun2">제출</button>
+                    <button type="reset" class="beoteun2">초기화</button><br>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
