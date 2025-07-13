@@ -1,0 +1,762 @@
+/* 메인 그리드 레이아웃 */
+.container {
+  display: grid; /* 그리드 레이아웃 사용 */
+  /* margin-top: 40px; */
+  width: 80%; /* 전체 너비의 80% */
+  height: 60%; /* 전체 높이의 60% */
+  overflow: hidden; /* 넘치는 내용 숨기기 */
+  gap: 1.875rem; /* 그리드 간격 30px */
+  padding: 1.875rem; /* 안쪽 여백 30px */
+  box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+  grid-template-columns: repeat(3, 300px); /* 3개 열, 각각 300px */
+  grid-template-rows: repeat(2, 200px); /* 2개 행, 각각 200px */
+
+  justify-content: center;  /* 그리드를 가로 중앙 정렬 */
+  align-content: center; /* 그리드를 세로 중앙 정렬 */
+}
+
+/* 그리드 컨테이너를 감싸는 래퍼 */
+.wrapper {
+  display: flex; /* 플렉스 레이아웃 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  margin-top:  1.875rem;  /* 위쪽 여백 30px */
+}
+
+/* 첫 번째 박스 - 큰 박스 */
+.box1 {
+  grid-column: 1/3; /* 1열부터 3열까지 차지 */
+  grid-row: 1/3; /* 1행부터 3행까지 차지 */
+  background-color: #C8BFFF; /* 연보라색 배경 */
+  width: 100%; /* 전체 너비 */
+  height: 100%; /* 전체 높이 */
+  border-radius:  1.875rem; /* 모서리 둥글게 30px */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 그림자 효과 */
+  cursor: pointer; /* 마우스 포인터 변경 */
+}
+
+/* 첫 번째 박스의 제목 */
+.box1 h1{
+  margin-top: 70px; /* 위쪽 여백 */
+  margin-left: 70px; /* 왼쪽 여백 */
+  font-size: 4rem; /* 글자 크기 */
+  margin-bottom: 0.5rem; /* 아래쪽 여백 */
+  line-height: 1.3; /* 줄 간격 */
+  font-weight: bolder; /* 글자 두께 */
+  color: #595679; /* 글자 색상 */
+}
+
+/* 첫 번째 박스의 본문 */
+.box1 p{
+  margin-left: 70px; /* 왼쪽 여백 */
+  font-size: 1.5rem; /* 글자 크기 */
+  color: #7672a0; /* 글자 색상 */
+  line-height: 1.4; /* 줄 간격 */
+}
+
+/* 첫 번째 박스 내부 div */
+.box1 div {
+  position: absolute; /* 절대 위치 */
+  top: 0; /* 위쪽 끝 */
+  left: 0; /* 왼쪽 끝 */
+  width: 100%; /* 전체 너비 */
+  height: 100%; /* 전체 높이 */
+  display: flex; /* 플렉스 레이아웃 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 첫 번째 박스 div 내부 제목 */
+.box1 div h1 {
+  font-size: 2.5rem; /* 글자 크기 */
+  margin-bottom: 0.5rem; /* 아래쪽 여백 */
+  line-height: 1.3; /* 줄 간격 */
+  font-weight: bolder; /* 글자 두께 */
+  color: #272641; /* 글자 색상 */
+}
+
+/* 첫 번째 박스의 이미지 */
+.box1 img{
+  width: 100%; /* 전체 너비 */
+  height: 200px; /* 높이 200px */
+  object-fit: cover; /* 비율 유지하며 크기 맞춤 */
+  border-radius:  1.875rem; /* 모서리 둥글게 30px */
+}
+
+/* 첫 번째 박스 마우스 오버 효과 */
+.box1:hover {
+  transform: scale(1.05); /* 1.05배 확대 */
+  transition: transform 0.2s ease; /* 부드러운 변화 효과 */
+  background-color: #B3A6FF; /* 배경색 변경 */
+}
+
+/* 두 번째 박스 */
+.box2 {
+  grid-column: 3/4; /* 3열 차지 */
+  grid-row: 1/2; /* 1행 차지 */
+  background-color: #B3EBA6; /* 연초록색 배경 */
+  width: 100%; /* 전체 너비 */
+  height: 100%; /* 전체 높이 */
+  border-radius: 30px; /* 모서리 둥글게 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 그림자 효과 */
+  cursor: pointer; /* 마우스 포인터 변경 */
+}
+
+/* 두 번째 박스의 제목 */
+.box2 h1{
+  margin-top: 25px; /* 위쪽 여백 */
+  margin-left: 30px; /* 왼쪽 여백 */
+  font-size: 1.75rem; /* 글자 크기 */
+  margin-bottom: 0.5rem; /* 아래쪽 여백 */
+  line-height: 1.3; /* 줄 간격 */
+  font-weight: bolder; /* 글자 두께 */
+  color: #595679; /* 글자 색상 */
+}
+
+/* 두 번째 박스의 본문 */
+.box2 p{
+  margin-left: 30px; /* 왼쪽 여백 */
+  font-size: 1rem; /* 글자 크기 */
+  color: #7672a0; /* 글자 색상 */
+  line-height: 1.4; /* 줄 간격 */
+  margin-bottom: 0px; /* 아래쪽 여백 없음 */
+  margin-top: 0px; /* 위쪽 여백 없음 */
+}
+
+/* 두 번째 박스의 이미지 */
+.box2 img{
+  width: 5.0rem; /* 너비 80px */
+  height: 5.0rem; /* 높이 80px */
+  object-fit: cover; /* 비율 유지하며 크기 맞춤 */
+  border-radius: 30px; /* 모서리 둥글게 */
+  margin-left: 12rem; /* 왼쪽 여백 */
+}
+
+/* 두 번째 박스 마우스 오버 효과 */
+.box2:hover {
+  transform: scale(1.05); /* 1.05배 확대 */
+  transition: transform 0.2s ease; /* 부드러운 변화 효과 */
+  background-color: #89b580; /* 배경색 변경 */
+}
+
+/* 세 번째 박스 */
+.box3 {
+  grid-column: 3/4; /* 3열 차지 */
+  grid-row: 2/3; /* 2행 차지 */
+  background-color: #A8DFEB; /* 연하늘색 배경 */
+  width: 100%; /* 전체 너비 */
+  height: 100%; /* 전체 높이 */
+  border-radius:  1.875rem; /* 모서리 둥글게 30px */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 그림자 효과 */
+  cursor: pointer; /* 마우스 포인터 변경 */
+}
+
+/* 세 번째 박스의 제목 */
+.box3 h1{
+  margin-top: 25px; /* 위쪽 여백 */
+  margin-left: 30px; /* 왼쪽 여백 */
+  font-size: 1.75rem; /* 글자 크기 */
+  margin-bottom: 0.5rem; /* 아래쪽 여백 */
+  line-height: 1.3; /* 줄 간격 */
+  font-weight: bolder; /* 글자 두께 */
+  color: #595679; /* 글자 색상 */
+}
+
+/* 세 번째 박스의 본문 */
+.box3 p{
+  margin-left: 30px; /* 왼쪽 여백 */
+  font-size: 1rem; /* 글자 크기 */
+  color: #7672a0; /* 글자 색상 */
+  line-height: 1.4; /* 줄 간격 */
+  margin-bottom: 0px; /* 아래쪽 여백 없음 */
+  margin-top: 0px; /* 위쪽 여백 없음 */
+}
+
+/* 세 번째 박스의 이미지 */
+.box3 img{
+  width: 5.0rem; /* 너비 80px */
+  height: 5.0rem; /* 높이 80px */
+  object-fit: cover; /* 비율 유지하며 크기 맞춤 */
+  border-radius: 30px; /* 모서리 둥글게 */
+  margin-left: 12rem; /* 왼쪽 여백 */
+}
+
+/* 세 번째 박스 마우스 오버 효과 */
+.box3:hover {
+  transform: scale(1.05); /* 1.05배 확대 */
+  transition: transform 0.2s ease; /* 부드러운 변화 효과 */
+  background-color: #709aa3; /* 배경색 변경 */
+}
+
+/* 상담센터 배너 래퍼 */
+.banner-wrapper {
+  position: relative; /* 자식 요소의 절대 위치 기준점 */
+}
+
+/* 배너 배경 1 */
+.banner-bg {
+  position: absolute; /* 절대 위치 */
+  top: 1.25rem; /* 위에서 20px */
+  right: 9.0rem; /* 오른쪽에서 144px */
+  width: 55%; /* 너비 55% */
+  height: 70%; /* 높이 70% */
+  background-color: #bfc7ff; /* 연보라색 배경 */
+  border-radius: 1.75rem; /* 모서리 둥글게 28px */
+  z-index: 0; /* 레이어 순서 0 */
+  margin-top: 1.25rem; /* 위쪽 여백 20px */
+}
+
+/* 배너 배경 2 */
+.banner-bg2 {
+  position: absolute; /* 절대 위치 */
+  top: 1.25rem; /* 위에서 20px */
+  right: 9.0rem; /* 오른쪽에서 144px */
+  width: 50%; /* 너비 50% */
+  height: 6rem; /* 높이 96px */
+  background-color: #bfc7ff; /* 연보라색 배경 */
+  border-radius:  1.75rem; /* 모서리 둥글게 28px */
+  z-index: 1; /* 레이어 순서 1 */
+}
+
+/* 메인 배너 */
+.banner {
+  display: flex; /* 플렉스 레이아웃 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between; /* 양쪽 끝 정렬 */
+  padding: 1rem 1.5rem; /* 안쪽 여백 */
+  border-radius: 0.625rem; /* 모서리 둥글게 */
+  background-color: #fff; /* 흰색 배경 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 그림자 효과 */
+  max-width: 62.5rem; /* 최대 너비 1000px */
+  margin: 0 auto; /* 중앙 정렬 */
+  position: relative; /* 상대 위치 */
+  z-index: 2; /* 레이어 순서 2 */
+}
+
+/* 왼쪽 영역 이미지 */
+.left img{
+  width: 3rem; /* 너비 48px */
+  height: auto; /* 높이 자동 */
+  border-radius: 0.625rem; /* 모서리 둥글게 10px */
+}
+
+/* 왼쪽, 가운데, 오른쪽 영역 공통 */
+.left, .center, .right {
+  display: flex; /* 플렉스 레이아웃 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 0.625rem; /* 간격 10px */
+}
+
+/* 오른쪽 영역 이미지 */
+.right img{
+  width: 3rem; /* 너비 48px */
+  height: auto; /* 높이 자동 */
+  border-radius: 0.625rem; /* 모서리 둥글게 10px */
+  cursor: pointer; /* 마우스 포인터 변경 */
+}
+
+/* 오른쪽 이미지 마우스 오버 효과 */
+.right img:hover {
+  transform: scale(1.1); /* 1.1배 확대 */
+  transition: transform 0.2s ease; /* 부드러운 변화 효과 */
+}
+
+/* 가운데 영역 */
+.center { 
+  flex: 1; /* 남은 공간 모두 차지 */
+  justify-content: center; /* 가로 중앙 정렬 */
+}
+
+/* 오른쪽 버튼 */
+.right button {
+  margin-left: 0.5rem; /* 왼쪽 여백 8px */
+  padding: 0.5rem 1rem; /* 안쪽 여백 */
+  border-radius: 0.375rem; /* 모서리 둥글게 6px */
+  border: 1px solid #5c6bc0; /* 테두리 */
+  background-color: white; /* 흰색 배경 */
+  color: #5c6bc0; /* 글자 색상 */
+  cursor: pointer; /* 마우스 포인터 변경 */
+}
+
+/* 로그인 버튼 마우스 오버 효과 */
+.right .login:hover {
+  background-color: #ffffff; /* 배경색 변경 */
+  color: #5c6bc0; /* 글자색 변경 */
+  border: #5c6bc0 1px solid; /* 테두리 색상 변경 */
+}
+
+/* 회원가입 버튼 마우스 오버 효과 */
+.right .signup:hover {
+  background-color: #5c6bc0; /* 배경색 변경 */
+  color: white; /* 글자색 변경 */
+  border: none; /* 테두리 제거 */
+}
+
+/* 버튼 포커스 효과 */
+.right button:focus {
+  outline: none; /* 기본 테두리 제거 */
+  box-shadow: 0 0 0 2px rgba(92, 107, 192, 0.5); /* 포커스 효과 추가 */
+}
+
+/* 버튼 클릭 효과 */
+.right button:active {
+  transform: scale(0.95); /* 0.95배로 축소 */
+  transition: transform 0.1s ease; /* 부드러운 클릭 효과 */
+}
+
+/* 로그인 버튼 기본 스타일 */
+.right .login {
+  background-color: #5c6bc0; /* 파란색 배경 */
+  color: white; /* 흰색 글자 */
+  border: none; /* 테두리 없음 */
+}
+
+/* 공지사항 컨테이너 */
+.container2 {
+display: grid; /* 그리드 레이아웃 */
+width: 80%; /* 너비 80% */
+height: 70%; /* 높이 70% */
+overflow: hidden; /* 넘치는 내용 숨기기 */
+gap: 1.5rem; /* 간격 24px */
+padding: 1.875rem; /* 안쪽 여백 30px */
+box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+grid-template-columns: repeat(3, 18rem); /* 3개 열, 각각 288px */
+grid-template-rows: repeat(1, 250px); /* 1개 행, 250px */
+justify-content: center; /* 그리드 전체를 중앙 정렬 */
+align-items: center; /* 세로 중앙 정렬 */
+margin-top: 4.375rem; /* 위쪽 여백 70px */
+position: relative; /* 상대 위치 */
+}
+
+/* 박스 래퍼 */
+#box_wrapper {
+display: flex; /* 플렉스 레이아웃 */
+justify-content: center; /* 가로 중앙 정렬 */
+align-items: center; /* 세로 중앙 정렬 */
+margin-top: 1.875rem; /* 위쪽 여백 30px */
+position: relative; /* 상대 위치 */
+}
+
+/* 박스 배경 */
+.box-bg {
+position: absolute; /* 절대 위치 */
+top: 10rem; /* 위에서 160px */
+left: 0px; /* 왼쪽 끝 */
+width: 95%; /* 너비 95% */
+height: 55%; /* 높이 55% */
+background-color: #EBE9F0; /* 연회색 배경 */
+border-radius: 0px 6.25rem 6.25rem 0px; /* 오른쪽만 둥글게 */
+z-index: 0; /* 레이어 순서 0 */
+margin-top: 1.25rem; /* 위쪽 여백 20px */
+}
+
+/* 개별 박스 공통 스타일 */
+.box2-1, .box2-2, .box2-3 {
+text-align: center; /* 텍스트 중앙 정렬 */
+display: flex; /* 플렉스 레이아웃 */
+flex-direction: column; /* 세로 방향 정렬 */
+justify-content: center; /* 세로 중앙 정렬 */
+align-items: center; /* 가로 중앙 정렬 */
+background-color: #FBFBFB; /* 밝은 회색 배경 */
+height: 16rem; /* 높이 256px */
+border-radius: 0.625rem; /* 모서리 둥글게 10px */
+border: solid 0.2px #343333; /* 얇은 테두리 */
+z-index: 1; /* 레이어 순서 1 */
+padding: 1.6rem; /* 안쪽 여백 */
+width: 18rem; /* 너비 288px */
+margin: 0; /* 외부 여백 없음 */
+box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 그림자 효과 */
+cursor: pointer; /* 마우스 포인터 변경 */
+}
+
+/* 공지사항 제목 */
+.container2 h2 {
+font-size: 1.4rem; /* 글자 크기 */
+margin-bottom: 1rem; /* 아래쪽 여백 */
+line-height: 1.3; /* 줄 간격 */
+}
+
+/* 공지사항 본문 */
+.container2 p {
+font-size: 1rem; /* 글자 크기 */
+color: #595959; /* 글자 색상 */
+line-height: 1.4; /* 줄 간격 */
+}
+
+/* 지원센터 버튼 래퍼 */
+.bottom_wrapper {
+display: flex; /* 플렉스 레이아웃 */
+justify-content: center; /* 가로 중앙 정렬 */
+align-items: center; /* 세로 중앙 정렬 */
+margin-top: 1.875rem; /* 위쪽 여백 30px */
+position: relative; /* 상대 위치 */
+}
+
+/* 하단 박스 */
+#bottom_box {
+position: absolute; /* 절대 위치 */
+top: 8vh; /* 위에서 8% */
+left: 50%; /* 왼쪽에서 50% */
+transform: translateX(-50%); /* 가로 중앙 정렬 */
+width: 35%; /* 너비 35% */
+height: 60%; /* 높이 60% */
+background-color: #ffffff; /* 흰색 배경 */
+border-radius: 100px; /* 완전히 둥글게 */
+border: 1px solid #3E5FFF; /* 파란색 테두리 */
+z-index: 0; /* 레이어 순서 0 */
+}
+
+/* 하단 컨테이너 */
+.bottom_container {
+width: 80%; /* 너비 80% */
+height: 80%; /* 높이 80% */
+box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+display: flex; /* 플렉스 레이아웃 */
+justify-content: center; /* 가로 중앙 정렬 */
+align-items: center; /* 세로 중앙 정렬 */
+position: relative; /* 상대 위치 */
+margin-top: 140px; /* 위쪽 여백 */
+overflow: visible; /* 내용이 넘쳐도 보이게 */
+display: flex; /* 플렉스 레이아웃 */
+flex-wrap: wrap; /* 줄바꿈 허용 */
+}
+
+/* 왼쪽 상단 박스 */
+.top_left_box {
+position: absolute; /* 절대 위치 */
+width: 20vh; /* 너비 */
+height: 6vh; /* 높이 */
+background-color: #3E5FFF; /* 파란색 배경 */
+border-radius: 120px; /* 완전히 둥글게 */
+z-index: 1; /* 레이어 순서 1 */
+bottom: -20px; /* 아래에서 -20px */
+left: 33%; /* 왼쪽에서 33% */
+font-size: 20px; /* 글자 크기 */
+font-weight: bold; /* 글자 두께 */
+color: #FFF; /* 흰색 글자 */
+display: flex; /* 플렉스 레이아웃 */
+justify-content: center; /* 가로 중앙 정렬 */
+align-items: center; /* 세로 중앙 정렬 */
+cursor: pointer; /* 마우스 포인터 변경 */
+}
+
+/* 오른쪽 상단 박스 */
+.top_right_box {
+position: absolute; /* 절대 위치 */
+width: 20vh; /* 너비 */
+height: 6vh; /* 높이 */
+background-color: #ffffff; /* 흰색 배경 */
+border-radius: 120px; /* 완전히 둥글게 */
+z-index: 1; /* 레이어 순서 1 */
+bottom: -20px; /* 아래에서 -20px */
+right: 33%; /* 오른쪽에서 33% */
+font-size: 20px; /* 글자 크기 */
+font-weight: bold; /* 글자 두께 */
+display: flex; /* 플렉스 레이아웃 */
+justify-content: center; /* 가로 중앙 정렬 */
+align-items: center; /* 세로 중앙 정렬 */
+cursor: pointer; /* 마우스 포인터 변경 */
+}
+
+/* 지원센터 이미지 그리드 */
+.center-grid {
+margin-top: 4rem; /* 위쪽 여백 64px */
+display: grid; /* 그리드 레이아웃 */
+grid-template-columns: repeat(2, 1fr); /* 2개 열 */
+gap: 20px; /* 간격 20px */
+padding: 60px; /* 안쪽 여백 60px */
+justify-items: center; /* 가로 중앙 정렬 */
+align-items: center; /* 세로 중앙 정렬 */
+}
+
+/* 센터 카드 */
+.center-card {
+position: relative; /* 상대 위치 */
+width: 450px; /* 너비 450px */
+height: auto; /* 높이 자동 */
+text-align: left; /* 텍스트 왼쪽 정렬 */
+}
+
+/* 센터 카드 이미지 */
+.center-card img {
+width: 100%; /* 전체 너비 */
+height: 300px; /* 높이 300px */
+object-fit: cover; /* 비율 유지하며 크기 맞춤 */
+border-radius: 10px; /* 모서리 둥글게 */
+z-index: 2; /* 레이어 순서 2 */
+position: relative; /* 상대 위치 */
+display: block; /* 블록 요소 */
+}
+
+/* 센터 카드 제목 */
+.center-card h3 {
+font-size: 22px; /* 글자 크기 */
+font-weight: bold; /* 글자 두께 */
+margin-top: 20px; /* 위쪽 여백 */
+z-index: 2; /* 레이어 순서 2 */
+position: relative; /* 상대 위치 */
+}
+
+/* 원형 장식 공통 스타일 */
+.circle {
+position: absolute; /* 절대 위치 */
+width: 220px; /* 너비 220px */
+height: 220px; /* 높이 220px */
+border-radius: 50%; /* 완전한 원 */
+z-index: 1; /* 레이어 순서 1 */
+}
+
+/* 왼쪽 원형 장식 위치 */
+.circle.left {
+top: -28px; /* 위에서 -28px */
+left: 70%; /* 왼쪽에서 70% */
+}
+
+/* 오른쪽 원형 장식 위치 */
+.circle.right {
+top: -28px; /* 위에서 -28px */
+right: -19%; /* 오른쪽에서 -19% */
+}
+
+/* 원형 장식 색상들 */
+.blue { background-color: #2d9cdb; } /* 파란색 */
+.purple { background-color: #9b51e0; } /* 보라색 */
+.green { background-color: #27ae60; } /* 초록색 */
+.teal { background-color: #2dc4b6; } /* 청록색 */
+
+/* 푸터 */
+footer {
+background: #1e1e2f; /* 어두운 배경색 */
+color: white; /* 흰색 글자 */
+padding: 20px; /* 안쪽 여백 20px */
+font-size: 12px; /* 글자 크기 12px */
+text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 모바일 반응형 스타일 - 768px 이하 화면에서만 적용 */
+@media screen and (max-width: 768px) {
+/* HTML 기본 글자 크기 조정 */
+html {
+  font-size: 14px; /* 1rem = 14px로 설정 */
+}
+
+/* 본문 글자 크기 */
+body {
+  font-size: 0.875rem; /* 더 작은 기본 글씨 크기 */
+}
+
+/* 모바일용 래퍼 */
+.wrapper {
+  margin-top: 1rem; /* 위쪽 여백 줄임 */
+}
+
+/* 모바일용 메인 컨테이너 */
+.container {
+  display: flex; /* 그리드 대신 플렉스 사용 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  gap: 1rem; /* 간격 16px */
+  padding: 1rem; /* 안쪽 여백 16px */
+  width: 100%; /* 전체 너비 */
+  height: auto; /* 높이 자동 */
+}
+
+/* 모바일용 박스 공통 스타일 */
+.box1, .box2, .box3 {
+  width: 70%; /* 너비 70% */
+  height: 150px; /* 높이 150px */
+  border-radius: 1rem; /* 모서리 둥글게 16px */
+  display: flex; /* 플렉스 레이아웃 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  margin: 0 auto; /* 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding: 1rem; /* 안쪽 여백 16px */
+  position: relative; /* 상대 위치 */
+  box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+}
+
+/* 모바일용 박스 제목 */
+.box1 h1, .box2 h1, .box3 h1 {
+  margin: 0; /* 여백 없음 */
+  font-size: 1.5rem; /* 글자 크기 24px */
+  margin-bottom: 0.5rem; /* 아래쪽 여백 8px */
+  font-weight: bolder; /* 글자 두께 */
+}
+
+/* 모바일용 박스 본문 */
+.box1 p, .box2 p, .box3 p {
+  margin: 0; /* 여백 없음 */
+  font-size: 0.9rem; /* 글자 크기 */
+  margin-bottom: 0.5rem; /* 아래쪽 여백 8px */
+  line-height: 1.4; /* 줄 간격 */
+}
+
+/* 모바일용 박스 이미지 */
+.box1 img, .box2 img, .box3 img {
+  width: 3rem; /* 너비 48px */
+  height: 3rem; /* 높이 48px */
+  margin: 0; /* 여백 없음 */
+  position: absolute; /* 절대 위치 */
+  bottom: 1rem; /* 아래에서 16px */
+  right: 1rem; /* 오른쪽에서 16px */
+  border-radius: 0.5rem; /* 모서리 둥글게 8px */
+}
+
+/* 모바일용 첫 번째 박스 div */
+.box1 div {
+  position: static; /* 정적 위치 */
+  display: block; /* 블록 요소 */
+}
+
+/* 모바일용 배너 래퍼 */
+.banner-wrapper {
+  padding: 1rem; /* 안쪽 여백 16px */
+}
+
+/* 모바일용 배너 */
+.banner {
+  flex-direction: column; /* 세로 방향 정렬 */
+  gap: 1rem; /* 간격 16px */
+  padding: 1rem; /* 안쪽 여백 16px */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  width: 40%; /* 너비 40% */
+}
+
+/* 모바일에서 배너 배경 숨기기 */
+.banner-bg,
+.banner-bg2 {
+  display: none; /* 숨기기 */
+}
+
+/* 모바일용 배너 영역들 */
+.left, .center, .right {
+  flex-direction: column; /* 세로 방향 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 모바일용 배너 버튼 */
+.right button {
+  margin: 0.25rem 0; /* 위아래 여백 4px */
+}
+
+/* 모바일용 박스 래퍼 */
+#box_wrapper {
+  margin-top: 1rem; /* 위쪽 여백 16px */
+}
+
+/* 모바일용 공지사항 컨테이너 */
+.container2 {
+  display: flex; /* 플렉스 레이아웃 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  gap: 1rem; /* 간격 16px */
+  padding: 1rem; /* 안쪽 여백 16px */
+  width: 90%; /* 너비 90% */
+  height: auto; /* 높이 자동 */
+  margin-top: 2rem; /* 위쪽 여백 32px */
+}
+
+/* 모바일에서 박스 배경 숨기기 */
+.box-bg {
+  display: none; /* 숨기기 */
+}
+
+/* 모바일용 공지사항 박스들 */
+.box2-1, .box2-2, .box2-3 {
+  width: 50%; /* 너비 50% */
+  height: auto; /* 높이 자동 */
+  font-size: 0.9rem; /* 글자 크기 */
+  padding: 1rem; /* 안쪽 여백 16px */
+  border: 1px solid #ccc; /* 회색 테두리 */
+  min-height: 120px; /* 최소 높이 120px */
+}
+
+/* 모바일용 공지사항 제목 */
+.container2 h2 {
+  font-size: 1.7rem; /* 글자 크기 */
+  margin-bottom: 0.5rem; /* 아래쪽 여백 8px */
+}
+
+/* 모바일용 공지사항 본문 */
+.container2 p {
+  font-size: 0.9rem; /* 글자 크기 */
+}
+
+/* 모바일용 하단 래퍼 */
+.bottom_wrapper {
+  margin-top: 2rem; /* 위쪽 여백 32px */
+}
+
+/* 모바일용 하단 컨테이너 */
+.bottom_container {
+  flex-direction: column; /* 세로 방향 정렬 */
+  margin-top: 1rem; /* 위쪽 여백 16px */
+  gap: 1rem; /* 간격 16px */
+  width: 90%; /* 너비 90% */
+}
+
+/* 모바일용 상단 박스들 */
+.top_left_box, .top_right_box {
+  position: static; /* 정적 위치 */
+  width: 80%; /* 너비 80% */
+  height: 3rem; /* 높이 48px */
+  font-size: 1rem; /* 글자 크기 16px */
+  margin: 0.5rem 0; /* 위아래 여백 8px */
+}
+
+/* 모바일용 오른쪽 상단 박스 */
+.top_right_box {
+  border: #3E5FFF 1px solid; /* 파란색 테두리 */
+  color: #3E5FFF; /* 파란색 글자 */
+}
+
+/* 모바일에서 하단 박스 숨기기 */
+#bottom_box {
+  display: none; /* 숨기기 */
+}
+
+/* 모바일용 센터 그리드 */
+.center-grid {
+  display: flex; /* 플렉스 레이아웃 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  padding: 1rem; /* 안쪽 여백 16px */
+  gap: 1rem; /* 간격 16px */
+  align-items: center; /* 가로 중앙 정렬 */
+}
+
+/* 모바일용 센터 카드 */
+.center-card {
+  width: 90%; /* 너비 90% */
+  display: flex; /* 플렉스 레이아웃 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 모바일용 센터 카드 이미지 */
+.center-card img {
+  height: 300px; /* 높이 300px */
+  object-fit: cover; /* 비율 유지하며 크기 맞춤 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+/* 모바일용 센터 카드 제목 */
+.center-card h3 {
+  font-size: 1.125rem; /* 글자 크기 18px */
+  margin-top: 1rem; /* 위쪽 여백 16px */
+}
+
+/* 모바일에서 원형 장식 숨기기 */
+.circle {
+  display: none; /* 숨기기 */
+}
+
+/* 모바일용 푸터 */
+footer {
+  font-size: 0.75rem; /* 글자 크기 12px */
+  padding: 1rem; /* 안쪽 여백 16px */
+}
+}
