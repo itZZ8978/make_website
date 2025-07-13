@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CSS 파일들 연결 -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/su1.css">
+  <link rel="stylesheet" href="../css/su2.css">
+</head>
+<body onload="initialize()">
+    <!-- 상단 헤더 영역 -->
+    <header>
+      <!-- 최상단 메뉴 (로그인, 회원가입) -->
+      <nav id="top_menu">
+        <ul>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
+      </nav>
+      <!-- 헤더 메인 콘텐츠 -->
+      <div id="header_content">
+        <!-- 로고 이미지 (클릭시 홈으로 이동) -->
+        <img src="../images/logo.png" alt="로고" id="logo" onclick="loadPage('home.html')">
+        <!-- 하단 네비게이션 메뉴 -->
+        <nav id="bottom_menu">
+          <ul>
+            <li><a href="#" onclick="loadPage('su2.html')">소개</a></li>
+            <li><a href="#" onclick="loadPage('su1.html')">지원정보</a></li>
+            <li><a href="#">상담센터</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">공지사항</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 메인 콘텐츠 영역 (페이지가 동적으로 바뀜) -->
+    <div id="content">
+      <!-- 동적으로 로드될 콘텐츠가 여기에 표시 -->
+    </div>
+      
+    <!-- 하단 footer 영역 -->
+    <footer>
+      <p>개인정보처리방침 저작권보호정책 이용약관 이메일주소무단수집거부 영상정보처리기기운영방법<br>
+      [43010] 대구광역시 달성군 구지면 청리로 11길 93<br>
+      통합망 고객지원센터(시스템문의): 1899-5590
+      </p>
+  </footer>
+    <!-- 자바스크립트 파일 연결 -->
+    <script src='../js/popup.js'></script>
+  </body>
+</html>
