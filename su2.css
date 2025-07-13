@@ -1,0 +1,191 @@
+/* 메인 이미지 영역 */
+.main-img-section {
+  position: relative;          /* 현 내부 요소 위치 기준 잡기 */
+  width: 100%;                 /* 너비 전체 */
+  height: 60vh;                /* 화면 높이의 60% */
+  overflow: hidden;            /* 넘치는 부분 숨기기 */
+  padding-top: 30px;           /* 위쪽 여백 */
+}
+
+.main-img-container {
+  position: absolute;          /* 부모 기준으로 위치 고정 */
+  width: 100%;                 /* 가로 꽉 채움 */
+  height: 100%;                /* 세로 꽉 채움 */
+  object-fit: cover;           /* 이미지 비율 유지하며 꽉 채우기 */
+  z-index: 0;                  /* 다른 요소보다 아래에 위치 */
+}
+
+.main-img-text {
+  position: absolute;          /* 이미지 위에 글자 배치 */
+  top: 50%;                    /* 세로 중앙 정렬 */
+  left: 50%;                   /* 가로 중앙 정렬 */
+  transform: translate(-20%, -30%); /* 정확한 위치 조정 */
+  text-align: center;          /* 글자 가운데 정렬 */
+  color: #fff;                 /* 글자 흰색 */
+  z-index: 1;                  /* 이미지보다 위에 보이도록 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+}
+
+.main-img-text h1 {
+  font-size: 50px;             /* 제목 글자 크기 */
+  font-weight: bold;           /* 굵은 글씨 */
+  margin-bottom: 20px;         /* 아래쪽 여백 */
+}
+
+.main-img-text p {
+  font-size: 20px;             /* 설명 글자 크기 */
+  line-height: 1.6;            /* 줄 간격 */
+}
+
+/* 정의 설명 박스 */
+.definition-box {
+  width: 70%;                  /* 너비 70% */
+  height: 15vh;                /* 높이 화면의 15% */
+  background-color: #ADB6FF;   /* 배경 연보라색 */
+  border-radius: 200px 0 0 200px; /* 왼쪽 둥근 테두리 */
+  display: flex;               /* 가로 정렬 */
+  align-items: center;         /* 세로 가운데 정렬 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  margin-top: 10vh;            /* 화면의 10% 위쪽 여백 */
+  padding: 2rem 2rem 2rem 6rem;/* 안쪽 여백 (왼쪽 크게) */
+  color: #000;                 /* 글자색 검정 */
+  margin-left: auto;           /* 오른쪽으로 정렬 */
+}
+
+.definition-text {
+  margin-top: 0px;
+  height: 20vh;                /* 높이 화면의 20% */
+}
+
+.definition-text h3 {
+  font-size: 1.5rem;           /* 제목 크기 */
+  margin-bottom: 1rem;         /* 아래 여백 */
+  margin-top: 60px;            /* 위 여백 */
+}
+
+.definition-text small {
+  font-size: 0.85rem;          /* 작은 글씨 크기 */
+  color: #333;                 /* 진한 회색 */
+}
+
+.definition-text p {
+  font-size: 1rem;             /* 본문 글자 크기 */
+  line-height: 1.6;            /* 줄 간격 */
+}
+
+/* 카드 섹션 */
+.card-section {
+  background-color: #e9e9f6;   /* 밝은 회보라 배경 */
+  padding: 2rem 10%;           /* 상하 2rem, 좌우 10% 여백 */
+  margin-top: 3rem;            /* 위쪽 여백 */
+}
+
+.card-list {
+  display: flex;               /* 가로 배치 */
+  justify-content: center;     /* 가운데 정렬 */
+  gap: 2rem;                   /* 간격 */
+  flex-wrap: wrap;             /* 줄 바꿈 가능 */
+}
+
+.card {
+  width: 400px;                /* 고정 너비 */
+  height: 255px;               /* 고정 높이 */
+  background-color: white;     /* 배경 흰색 */
+  border-radius: 15px;         /* 둥근 테두리 */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* 그림자 효과 */
+  overflow: hidden;            /* 넘치는 부분 숨김 */
+  display: flex;               /* 가운데 정렬 위해 flex 사용 */
+  align-items: center;       /* 수직 방향(교차축)으로 가운데 정렬 */
+  justify-content: center; /* 가로 방향(주축 기준)으로 가운데 정렬 */
+}
+
+.card-img {
+  width: 100%;                 /* 가로 꽉 채움 */
+  height: 100%;                /* 세로 꽉 채움 */
+  object-fit: cover;           /* 이미지 비율 유지하며 채우기 */
+}
+
+/* 사용자 후기 섹션 */
+.review-section {
+  padding: 4rem 10%;           /* 안쪽 여백 (상하 4rem, 좌우 10%) */
+}
+
+.review-section h2 {
+  margin-bottom: 2rem;         /* 제목 아래 여백 */
+  color: #333;                 /* 진한 회색 글자 */
+}
+
+.review-card {
+  position: relative;     /* 원래 위치를 기준으로 이동 */
+  display: flex;               /* 가로 배치 */
+  align-items: flex-start;     /* 위쪽 정렬 */
+  background: #fff;            /* 배경 흰색 */
+  padding: 1.2rem;             /* 안쪽 여백 */
+  border-radius: 12px;         /* 둥근 모서리 */
+  margin-bottom: 1.5rem;       /* 아래 여백 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 그림자 */
+}
+
+.review-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;         /* 동그란 프로필 사진 */
+  object-fit: cover;           /* 비율 유지하면서 채움 */
+  margin-right: 1rem;          /* 오른쪽 여백 */
+}
+
+.review-content {
+  flex: 1;                     /* 남은 공간 모두 차지 */
+  position: relative;       /* 원래 위치를 기준으로 이동 */
+}
+
+.review-content p {
+  margin: 0;
+  font-weight: bold;           /* 굵은 글씨 */
+  font-size: 0.95rem;          /* 글자 크기 */
+  line-height: 1.6;            /* 줄 간격 */
+  padding-right: 6rem;         /* 오른쪽 여백 */
+}
+
+.name {
+  display: block;
+  margin-top: 0.5rem;          /* 위 여백 */
+}
+
+.stars {
+  position: absolute;  /* 조상 요소를 기준으로 정확한 위치에 배치 */
+  bottom: 0;
+  right: 0;            /* 오른쪽 기준으로 0만큼 떨어진 위치에 배치 */
+  color: #f5c518;              /* 별 색상 (노란색 계열) */
+  font-size: 1.1rem;           /* 별 크기 */
+}
+
+/* 반응형 대응 (모바일) */
+@media screen and (max-width: 768px) {
+  .card-list {
+      display: block;          /* 카드 하나씩 세로로 배치 */
+  }
+
+  .card {
+      margin: 30px auto;       /* 위아래 여백, 가운데 정렬 */
+  }
+
+  .definition-box {
+      height: auto;            /* 높이 자동 */
+      padding: 2rem;           /* 안쪽 여백 */
+      border-radius: 90px 0 0 90px; /* 모서리 둥글게 줄이기 */
+  }
+
+  .main-img-text h1 {
+      font-size: 36px;         /* 제목 글자 작게 */
+  }
+
+  .definition-text h3 {
+     margin-top: 30px;         /* 위 여백 줄이기 */
+  }
+
+  .main-img-text p {
+      font-size: 16px;         /* 본문 글자 작게 */
+  }
+}
+
